@@ -9,6 +9,7 @@ buildscript {
         classpath 'com.adarshr:gradle-test-logger-plugin:1.6.0'
     }
 }
+
 apply plugin: 'com.adarshr.test-logger'
 apply plugin: 'application'
 apply plugin: 'java'
@@ -16,7 +17,7 @@ apply plugin: 'java'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-mainClassName = 'com.github.diegopacheco.sandbox.java.Main'
+mainClassName = 'com.github.diegopacheco.xunit.testing.bank.Main'
 
 repositories {
     mavenCentral()
@@ -36,7 +37,7 @@ run {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnit()
 }
 
 testlogger {
